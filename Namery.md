@@ -67,7 +67,7 @@ Any value/variable that exists **only** to act or influence the value of others.
 # Functions
 ### Library function - name + inherited
 A function which serves as portal to a library or API. They are prepended with their library name (case sensitive) + _ + the name the function would get, in acordance with other function types.
-Examples: `Lib_camelCaseFunc()`, `Lib_PascalCaseFunc()` `Lib_snake_case_func()`.
+A library name may also be subsituted for something that represents the library or its usage(s). Examples: `Lib_camelCaseFunc()`, `Lib_PascalCaseFunc()` `Lib_snake_case_func()`.
 
 ### Basis/tiny functions - camelCase/lowercase_snake_case
 Functions that relay basic functionality (e.g. protocol handling) or handle meanial tasks such as basic lookups or easy steps in mathematical operations.
