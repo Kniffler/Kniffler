@@ -65,10 +65,20 @@ Any member of a structure or union.
 Any value/variable that exists **only** to act or influence the value of others.
 
 # Functions
-## 
+## Basis/tiny functions - camelCase/lowercase_snake_case
+Functions that relay basic functionality (e.g. protocol handling) or handle meanial tasks such as basic lookups or easy steps in mathematical operations.
 
-# TODO:
-- [ ] Add function naming conventions;
-- [X] Add object (struct, union, enum and typedef) naming conventions;
-- [ ] Cover library scenario;
-- [ ] Cover other scenarios.
+## Executing function - PascalCase
+A function which serves the execution of the code, such as printing to the terminal, high-level peripheral communication, UI handling or an operation loop.
+
+## Library function - name + inherited
+A function which serves as portal to a library or API. They are prepended with their library name (case sensitive) + _ + the name the function would get, in acordance with other function types.
+Examples: `Lib_camelCaseFunc()`, `Lib_PascalCaseFunc()` `Lib_snake_case_func()`.
+
+## Exercising function - camelCase
+A function that takes in a pointer (or direct copy with intent to return modified version), to an object or variable and consequently modifies it or otherwise acts upon it.
+<!-- This does not apply to library functions. -->
+
+# Misc.
+## Typedefs
+Can only be a single lowercase word. The type must end in `_t` to indicate that it is a type. This is prohibited to do with any function, variable or object.
