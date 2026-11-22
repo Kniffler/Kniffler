@@ -25,7 +25,7 @@ They may include decimal or roman numbers, but only when relevant.
 # Values/variables
 Any value/variable may meet one or more criteria, please prioritize the criteria in order of their listing (e.g. 1st criteria is to be followed even if it violates the 2nd).
 
-## Pointers - Inherited
+### Pointers - Inherited
 Pointers are a bit of an odd ball, but they generally inherit the naming convention of their value or that which their value would have if it were a variable.
 In a lot of situations the pointer's usage is already different enough for a new name, however if this isn't the case, then add:
 - `p_` for camelCase;
@@ -34,16 +34,16 @@ In a lot of situations the pointer's usage is already different enough for a new
 
 *These are to be added at the beginning.
 
-## Single computation holders - Modified_snake_case
+### Single computation holders - Modified_snake_case
 A piece, or container, of data, that is computed once during runtime or already given by the user at compile-time. Importantly, if it is given at compile-time, the value cannot be function impeding (alter execution flow of the code). Examples include image and sound data as well as perlin noise.
 
-## Constant values - UPPERCASE_SNAKE_CASE
+### Constant values - UPPERCASE_SNAKE_CASE
 Any variable defined with the `const` or `enum` keywords or made with the `#define`'d macro - independently of scope.
 
-## Temporary values - camelCase
+### Temporary values - camelCase
 Any value/variable that is not used consistently throughout its scope or is used once, e.g. a `temp` variable for swapping two values or an intermediate value in a long calculation.
 
-## Permanent values - PascalCase
+### Permanent values - PascalCase
 These are values/variables that are either:
 - declared/defined using the `static` or `struct` keyword,
 - defined/declared in `main`,
@@ -54,31 +54,31 @@ These are values/variables that are either:
 *Directly affected by `main`, in this context, means that the value/variable must be affected directly via a mathematical or otherwise unconditional method.
 This also signifies that any dependency on a non-permanent value for controlling this value/variable may invalidate it as a permanent value.
 
-## Semi-permanent values (parameters) - camelCase
+### Semi-permanent values (parameters) - camelCase
 Variables that are used throughout their scope, but do not exert function nor control over other related/associated parts of the code.
 A good example of this is function parameters, they are used entirely within their scope but do not affect functions with similar or related appliances.
 
-## Object member - camelCase/lowercase_snake_case
+### Object member - camelCase/lowercase_snake_case
 Any member of a structure or union.
 
-## Acting values - lowercase_snake_case
+### Acting values - lowercase_snake_case
 Any value/variable that exists **only** to act or influence the value of others.
 
 # Functions
-## Basis/tiny functions - camelCase/lowercase_snake_case
+### Basis/tiny functions - camelCase/lowercase_snake_case
 Functions that relay basic functionality (e.g. protocol handling) or handle meanial tasks such as basic lookups or easy steps in mathematical operations.
 
-## Executing function - PascalCase
+### Executing function - PascalCase
 A function which serves the execution of the code, such as printing to the terminal, high-level peripheral communication, UI handling or an operation loop.
 
-## Library function - name + inherited
+### Library function - name + inherited
 A function which serves as portal to a library or API. They are prepended with their library name (case sensitive) + _ + the name the function would get, in acordance with other function types.
 Examples: `Lib_camelCaseFunc()`, `Lib_PascalCaseFunc()` `Lib_snake_case_func()`.
 
-## Exercising function - camelCase
+### Exercising function - camelCase
 A function that takes in a pointer (or direct copy with intent to return modified version), to an object or variable and consequently modifies it or otherwise acts upon it.
 <!-- This does not apply to library functions. -->
 
 # Misc.
-## Typedefs
+### Typedefs
 Can only be a single lowercase word. The type must end in `_t` to indicate that it is a type. This is prohibited to do with any function, variable or object.
