@@ -65,15 +65,15 @@ Any member of a structure or union.
 Any value/variable that exists **only** to act or influence the value of others.
 
 # Functions
+### Library function - name + inherited
+A function which serves as portal to a library or API. They are prepended with their library name (case sensitive) + _ + the name the function would get, in acordance with other function types.
+Examples: `Lib_camelCaseFunc()`, `Lib_PascalCaseFunc()` `Lib_snake_case_func()`.
+
 ### Basis/tiny functions - camelCase/lowercase_snake_case
 Functions that relay basic functionality (e.g. protocol handling) or handle meanial tasks such as basic lookups or easy steps in mathematical operations.
 
 ### Executing function - PascalCase
 A function which serves the execution of the code, such as printing to the terminal, high-level peripheral communication, UI handling or an operation loop.
-
-### Library function - name + inherited
-A function which serves as portal to a library or API. They are prepended with their library name (case sensitive) + _ + the name the function would get, in acordance with other function types.
-Examples: `Lib_camelCaseFunc()`, `Lib_PascalCaseFunc()` `Lib_snake_case_func()`.
 
 ### Exercising function - camelCase
 A function that takes in a pointer (or direct copy with intent to return modified version), to an object or variable and consequently modifies it or otherwise acts upon it.
